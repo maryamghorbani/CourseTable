@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 
 // import components
+import Card from "./UI/Card";
 
 const Table = () => {
 
@@ -20,7 +21,7 @@ const Table = () => {
     useEffect(() => getDta(), [])
 
     return (
-        <div>{responseData.size}</div>
+        <Card>{responseData.size}</Card>
     )
 };
 

@@ -4,15 +4,14 @@ import axios from "axios";
 // import components
 import Card from "./UI/Card";
 
-import 'bootstrap/dist/css/bootstrap.css';
-const Table = () => {
+import { Table } from 'react-bootstrap';
+
+const CourseTable = () => {
 
     const [responseData , setResponseData] = useState([]);
     const getDta = () => {
-        axios.get('https://api.most.technology/course/')
-            .then((response) => {
-                const myData = response.data;
-                setResponseData(myData);
+        axios.get('https://api.most.technology/course/').then(response => response.data).then((data) => {
+                setResponseData(data.data);
                 // pass data response to state
             })
             .catch(function (error) {
@@ -45,4 +44,4 @@ const Table = () => {
     </Card>)
 };
 
-export default Table;
+export default CourseTable;

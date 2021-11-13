@@ -1,13 +1,13 @@
 import React from 'react';
 
 //import components
-import Table from "./Component/Table";
+import CourseTable from "./Component/CourseTable";
 
 
 function App() {
   return (
     <div>
-        <Table/>
+        <CourseTable/>
     </div>
   );
 }
